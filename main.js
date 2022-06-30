@@ -55,7 +55,7 @@ for (i = 0; i < resource.length; i++) {
 }
 
 /* ***************************** Submission Alert ********************************** */
-var submissionAlert = document.getElementById('submit')
+var submissionAlert = document.getElementById('submit');
 submissionAlert.addEventListener('click', function() {
     alert("Your answer was received and costs are being calculated");
-})
+});
