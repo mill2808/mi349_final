@@ -1,208 +1,274 @@
 html {
-    background: #e3e3e3;
+  background: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ***************************** Top Navigation menu ********************************* */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 0.75rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 960px) {
+  .toggle-button {
+    display: flex;
   }
-  
-  /* ****************************** Header image formatting ************************* */
-  
-  .index-header {
-    min-width: 100%;
-    height: 300px;
-    background: url('bright_panels.jpg');
-    background-size: cover;
-    background-position: center;
+
+  .navbar-links {
+    display: none;
+    width: 100%;
   }
-  
-  .calculator-header {
-    min-width: 100%;
-    height: 300px;
-    background: url('cows_grazing.jpg');
-    background-size: cover;
-    background-position: center center;
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .funding-header {
-    min-width: 100%;
-    height: 300px;
-    background: url('sunset_panels.jpg');
-    background-size: cover;
-    background-position: center center;
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
   }
-  
-  .resources-header {
-    min-width: 100%;
-    height: 300px;
-    background: url('roof_panels.jpg');
-    background-size: cover;
-    background-position: center center;
+
+  .navbar-links li {
+    text-align: center;
   }
-  
-  .questions-header {
-    min-width: 100%;
-    height: 300px;
-    background: url('bright_panels.jpg');
-    background-size: cover;
-    background-position: center center;
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
   }
-  
-  /* ****************************** Body and border formatting ************************* */
-  body {
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      margin: 40px;
-      padding: 40px;
-      color: #242424;
-      border-top: 10px solid #242424;
-      background: rgb(255, 254, 254);
+  .navbar-links .active {
+    display: flex; 
   }
-  
-  
-  /* ***************************** Top Navigation menu ********************************* */
-  /* Add a background color to the top navigation */
-  .topnav {
-      background-color: #18453b;
-      overflow: hidden;
-      min-width: 100%;
-    }
-    
-    /* Style the links inside the navigation bar */
-    .topnav a {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-    
-      /* Add a color to the active/current link */
-      .topnav a:current {
-          background-color: #375248;
-          color: white;
-        }
-  
-    /* Change the color of links on hover */
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-  
-  
+}
+
+/* ****************************** Header image formatting ************************* */
+
+.index-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('bright_panels.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.calculator-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('cows_grazing.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.funding-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('sunset_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.resources-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('roof_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.questions-header {
+  min-width: 100%;
+  height: 300px;
+  background: url('bright_panels.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+ /* ******************************* Main header styling***************************************** */
+.main-header{
+  padding: 0.5rem;
+  position: relative;
+  background-color: #18453B; 
+  color: white;
+}
+
+
+.body-text{
+  padding: 1rem;
+  background-color: rgb(251, 251, 251);
+}
+
   /* *******************************FAQ styling***************************************** */
-  .faq-heading{
-     
-      border-bottom: #777;
-      padding: 20px 60px;
-  }
-  .faq-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  }
-  .hr-line{
-    width: 70%;
-    margin: auto;
-    
-  }
-  /* Style the buttons that are used to open and close the faq-page body */
-  .faq-page {
-      /* background-color: #eee; */
-      font-size: 110%;
-      color: #444;
-      cursor: pointer;
-      padding: 30px 20px;
-      width: 70%;
-      border-left-width: 10px;
-      outline: none;
-      transition: 0.4s;
-      margin: auto;
-  }
-  .faq-body{
-      margin: auto;
-      text-align: left;
-      width: 50%; 
-      padding: auto;
-  }
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active,
-  .faq-page:hover {
-      background-color: #c8dad3;
-  }
-  /* Style the faq-page panel. Note: hidden by default */
-  .faq-body {
-      padding: 0 18px;
-      background-color: #fff;
-      display: none;
-      overflow: hidden;
-  }
-  .faq-page:after {
-      content: '\02795';
-      /* Unicode character for "plus" sign (+) */
-      font-size: 13px;
-      color: #777;
-      float: right;
-      margin-left: 5px;
-  }
-  .active:after {
-      content: "\2796";
-      /* Unicode character for "minus" sign (-) */
-  }
-  
-  
-  /* *******************************Resource page styling******************************* */
-  .resource-heading{
-     
+.faq-heading{
+   
     border-bottom: #777;
-    padding: 20px 60px;
-  }
-  .resource-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  }
-  .hr-line{
+    padding: 1rem 3rem;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
   width: 70%;
   margin: auto;
-  
-  }
-  /* Style the buttons that are used to open and close the faq-page body */
-  .resource-page {
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
     /* background-color: #eee; */
     font-size: 110%;
     color: #444;
     cursor: pointer;
-    padding: 30px 20px;
+    padding: 3rem 2rem;
     width: 70%;
-    border-left-width: 10px;
+    border-left-width: 1rem;
     outline: none;
     transition: 0.4s;
     margin: auto;
-  }
-  .resource-body{
+}
+.faq-body{
     margin: auto;
     text-align: left;
     width: 50%; 
     padding: auto;
-  }
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active,
-  .resource-page:hover {
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
     background-color: #c8dad3;
-  }
-  /* Style the faq-page panel. Note: hidden by default */
-  .resource-body {
-    padding: 0 18px;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    padding: 0 1.8rem;
     background-color: #fff;
     display: none;
     overflow: hidden;
-  }
-  .resource-page:after {
+}
+.faq-page:after {
     content: '\02795';
     /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
+    font-size: 1.3rem;
     color: #777;
     float: right;
-    margin-left: 5px;
-  }
-  .active:after {
+    margin-left: 0.5rem;
+}
+.active:after {
     content: "\2796";
     /* Unicode character for "minus" sign (-) */
-  }
+}
+
+
+/* *******************************Resource page styling******************************* */
+.resource-heading{
+   
+  border-bottom: #777;
+  padding: 2rem 6rem;
+}
+.resource-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+width: 70%;
+margin: auto;
+
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.resource-page {
+  /* background-color: #eee; */
+  font-size: 110%;
+  color: #444;
+  cursor: pointer;
+  padding: 3rem 2rem;
+  width: 70%;
+  border-left-width: 1rem;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+.resource-body{
+  margin: auto;
+  text-align: left;
+  width: 50%; 
+  padding: auto;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.resource-page:hover {
+  background-color: #c8dad3;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.resource-body {
+  padding: 0 1.8rem;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+}
+.resource-page:after {
+  content: '\02795';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 1.3rem;
+  color: #777;
+  float: right;
+  margin-left: 0.5rem;
+}
+.active:after {
+  content: "\2796";
+  /* Unicode character for "minus" sign (-) */
+}

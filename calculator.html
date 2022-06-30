@@ -6,29 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Economic Feasibility Analysis</title>
-    <h1>Michigan State University Decision Support Tool</h1> 
 </head>
 <body>
+    <nav class="navbar">
+        <div class="title">MICHIGAN STATE UNIVERSITY</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Solar Cost Calculator</a></li>
+            <li><a href="funding.html">Funding</a></li>
+            <li><a href="resources.html">Local Resources</a></li>
+            <li><a href="questions.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
     <main>
         <div class="calculator-header"></div>
     </main>
 
-    <div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="calculator.html">Solar Cost Calculator</a>
-        <a href="funding.html">Funding</a></li>
-        <a href="resources.html">Local Resources</a>
-        <a href="questions.html">FAQ</a>
-    </div>
+    <div class="main-header">
+        <h2>Solar for Dairy</h2>
+        <p>Solar for Dairy is a program designed to help dairy farmers in Michigan explore the potential of 
+            installing solar panels on their farm structures and non-arable farmland.
+        </p>
+        </div>
 
+    <div class="body-text">
     <section>
-        <form> <h3> Please Answer the Following Questions About Your Farm</h3>
+        <h3>Solar Cost Calculator</h3>
+        <form> <h4> Please Answer the Following Questions About Your Farm</h4>
             <p><label> Which region of Michigan is your farm located?
                 <select>
                     <option value="Northern Michigan">Northern Michigan</option>
                     <option value="Western Michigan">Western Michigan</option>
                     <option value="Central Michigan">Central Michigan</option>
                     <option value="Southeast Michigan">Southeast Michigan</option>
+                    <option value="Upper Peninsula">Upper Peninsula</option>
                   </select>
             <p><label>How much electricity does your farm consume per year? (kWh)
                 <input type="text"> </p>
@@ -47,9 +65,16 @@
                         <option value="1.0 ">100%</option>
                       </select>
                 </label> </p>
-            <p><button id="submit">Submit</button></p>
+            <p><label> Email Address
+                <input type="text">
+            </label> </p>
+            <p><label> Comments
+                <input type="text">
+            </label> </p>
+            <p><button>Submit</button></p>
         </form>
     </section>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
